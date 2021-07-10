@@ -1,0 +1,15 @@
+.todo-title {
+  color: tomato;
+  background-color: rgb(105, 204, 204);
+  padding: 3px;
+  border-radius: 4px;
+}
+
+.todo-container {
+  background-color: lightgray;
+  border-radius: 10px;
+  border-color: black;
+  border-style: solid;
+  border-width: 2px;
+  padding: 5px;
+}

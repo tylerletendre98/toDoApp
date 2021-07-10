@@ -6,7 +6,7 @@ const Header = () => {
       <div className="container">
         <div class="row">
           <div class="col"></div>
-          <div class="col-6">
+          <div class="col-8">
             <div className="app-title">
               <h1>To Do App</h1>{" "}
             </div>

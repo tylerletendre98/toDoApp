@@ -17,6 +17,7 @@ class ToDoForm extends Component {
       date: this.state.date,
     };
     this.props.addToDo(todo);
+    this.setState();
   };
   render() {
     return (
