@@ -2,7 +2,7 @@ import { Component } from "react";
 
 class ToDoForm extends Component {
   state = {
-    title: "",
+    catergory: "",
     description: "",
     date: "",
   };
@@ -12,10 +12,11 @@ class ToDoForm extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     const todo = {
-      title: this.state.title,
+      catergory: this.state.catergory,
       description: this.state.description,
       date: this.state.date,
     };
+    console.log(todo);
     this.props.addToDo(todo);
     this.setState();
   };
@@ -31,14 +32,18 @@ class ToDoForm extends Component {
                   <label for="exampleFormControlInput1" class="form-label">
                     Title
                   </label>
-                  <input
-                    name="title"
-                    type="text"
-                    class="form-control"
-                    id="exampleFormControlInput1"
-                    placeholder="Name of what needs to get done"
+                  <select
+                    class="form-select"
+                    name="catergory"
+                    aria-label="Default select example"
                     onChange={this.handleChange}
-                  />
+                  >
+                    <option selected>Choice a catergory</option>
+                    <option value="School">School</option>
+                    <option value="Work">Work</option>
+                    <option value="Cleaning">Cleaning</option>
+                    <option value="YardWork">YardWork</option>
+                  </select>
                 </div>
                 <div class="mb-3">
                   <label for="exampleFormControlTextarea1" class="form-label">

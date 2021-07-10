@@ -20,7 +20,7 @@ const DisplayTodos = (props) => {
                   <div className>
                     <div className="todo-container">
                       <div className="todo-title">
-                        <h4>{todo.title}</h4>
+                        <h4>{todo.catergory}</h4>
                       </div>
                       <div>
                         <p>{todo.description}</p>
