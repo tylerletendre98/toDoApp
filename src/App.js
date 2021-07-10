@@ -9,13 +9,14 @@ class App extends Component {
   };
   addToDo = (todo) => {
     this.state.toDos.push(todo);
+    console.log(this.state.toDos);
   };
   render() {
     return (
       <div className="App">
         <dir>
           <Header />
-          <ToDoForm />
+          <ToDoForm addToDo={this.addToDo} />
         </dir>
       </div>
     );

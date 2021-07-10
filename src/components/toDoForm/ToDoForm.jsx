@@ -11,7 +11,12 @@ class ToDoForm extends Component {
   };
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log(this.state);
+    const todo = {
+      title: this.state.title,
+      description: this.state.description,
+      date: this.state.date,
+    };
+    this.props.addToDo(todo);
   };
   render() {
     return (
