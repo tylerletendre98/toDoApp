@@ -15,13 +15,20 @@ class App extends Component {
     this.state.toDos.push(todo);
     this.setState(this.state.toDos);
   };
+
+  completeTodo = (todo) => {
+    this.setState((todo.isCompleted = true));
+  };
   render() {
     return (
       <div className="App">
         <div>
           <Header />
           <ToDoForm addToDo={this.addToDo} />
-          <DisplayTodos toDos={this.state.toDos} />
+          <DisplayTodos
+            toDos={this.state.toDos}
+            completeTodo={this.completeTodo}
+          />
         </div>
       </div>
     );

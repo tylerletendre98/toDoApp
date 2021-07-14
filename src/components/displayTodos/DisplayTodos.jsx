@@ -19,7 +19,14 @@ const DisplayTodos = (props) => {
                 return (
                   <div className>
                     <div className="todo-container">
-                      <div className="todo-title">
+                      <div
+                        className="todo-title"
+                        style={{
+                          background: (todo.isCompleted = true
+                            ? "red"
+                            : "blue"),
+                        }}
+                      >
                         <h4>{todo.catergory}</h4>
                       </div>
                       <div>
@@ -28,6 +35,9 @@ const DisplayTodos = (props) => {
                       <div>
                         <p>{todo.date}</p>
                       </div>
+                      <button onClick={() => props.completeTodo(todo)}>
+                        complete task
+                      </button>
                     </div>
                   </div>
                 );

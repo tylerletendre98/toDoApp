@@ -5,6 +5,7 @@ class ToDoForm extends Component {
     catergory: "",
     description: "",
     date: "",
+    isCompleted: false,
   };
   handleChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });
@@ -15,6 +16,7 @@ class ToDoForm extends Component {
       catergory: this.state.catergory,
       description: this.state.description,
       date: this.state.date,
+      isCompleted: this.state.isCompleted,
     };
     console.log(todo);
     this.props.addToDo(todo);
@@ -42,7 +44,7 @@ class ToDoForm extends Component {
                     <option value="School">School</option>
                     <option value="Work">Work</option>
                     <option value="Cleaning">Cleaning</option>
-                    <option value="YardWork">YardWork</option>
+                    <option value="Yard Work">Yard Work</option>
                   </select>
                 </div>
                 <div class="mb-3">
