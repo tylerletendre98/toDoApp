@@ -6,6 +6,7 @@ class ToDoForm extends Component {
     description: "",
     date: "",
     isCompleted: false,
+    id: Math.floor(Math.random() * 10000 + 1),
   };
   handleChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });
@@ -17,10 +18,16 @@ class ToDoForm extends Component {
       description: this.state.description,
       date: this.state.date,
       isCompleted: this.state.isCompleted,
+      id: this.state.id,
     };
     console.log(todo);
     this.props.addToDo(todo);
-    this.setState();
+    this.setState({
+      catergory: "",
+      description: "",
+      date: "",
+      id: Math.floor(Math.random() * 10000 + 1),
+    });
   };
   render() {
     return (

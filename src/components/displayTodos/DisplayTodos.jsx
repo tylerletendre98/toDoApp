@@ -35,7 +35,7 @@ const DisplayTodos = (props) => {
                       <div>
                         <p>{todo.date}</p>
                       </div>
-                      <button onClick={() => props.completeTodo(todo)}>
+                      <button onClick={() => props.completeTodo()}>
                         complete task
                       </button>
                     </div>
